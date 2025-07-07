@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Predictor</title>
+</head>
+<body>
+    <h2>Predict Student's Final Grade</h2>
+    <form action="/predict" method="POST">
+        {% for i in range(0, num_inputs) %}
+            <label>Input {{ i+1 }}:</label>
+            <input type="text" name="{{ i }}" required><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
